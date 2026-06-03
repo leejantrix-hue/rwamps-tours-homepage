@@ -132,14 +132,17 @@ export const DESTINATIONS: Destination[] = [
 },
 ];
 
+// Filter pills — values must match actual destination.tags entries (plus "All"
+// as the show-everything default). Order picked for visual rhythm in the UI.
 export const DESTINATION_FILTERS = [
-'All Type',
-'Sandy Dunes',
-'Cold Bond Fires',
-'Exclusive Hotels',
-'Beautiful Malls',
-'Beach Resorts',
-'Mountain Views',
+'All',
+'Luxury',
+'Beach',
+'Cultural',
+'Adventure',
+'Desert',
+'Mountains',
+'Heritage',
 ] as const;
 
 // Search Section dropdowns
@@ -153,7 +156,9 @@ export const SEARCH_LOCATIONS = [
 'Sharjah',
 ] as const;
 
-export const SEARCH_BUDGETS = [
+// Budget bands shown in the SearchBar dropdown.
+// Exported as BUDGET_OPTIONS (consumer name) and aliased as SEARCH_BUDGETS for legacy callers.
+export const BUDGET_OPTIONS = [
 'AED 1000 - 2500',
 'AED 2600 - 5000',
 'AED 5000 - 7500',
@@ -161,3 +166,5 @@ export const SEARCH_BUDGETS = [
 'AED 10000 - 15000',
 'AED 15000 - 20000',
 ] as const;
+
+export const SEARCH_BUDGETS = BUDGET_OPTIONS;
