@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+
+.badge {
+display: inline-flex;
+align-items: center;
+gap: $space-1;
+padding: $space-1 $space-3;
+border-radius: $radius-pill;
+font-size: $font-size-xs;
+font-weight: $font-weight-semibold;
+line-height: 1;
+}
+
+.green { background: $color-primary-soft; color: $color-primary-dark; }
+.orange { background: $color-accent-soft; color: $color-accent; }
+.gray { background: $color-gray-100; color: $color-gray-700; }
+.white { background: $color-white; color: $text-primary; box-shadow: $shadow-sm; }
+
+.icon { display: inline-flex; align-items: center; }
