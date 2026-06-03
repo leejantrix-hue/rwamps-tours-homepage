@@ -1,0 +1,93 @@
+@use '../../styles/variables' as *;
+
+.footer {
+background: $color-secondary;
+color: $color-gray-300;
+padding: $space-20 0 $space-8;
+margin-top: $space-24;
+}
+
+.grid {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr 1.5fr;
+gap: $space-10;
+
+@media (max-width: $bp-lg) { grid-template-columns: 1fr 1fr; gap: $space-8; }
+@media (max-width: $bp-sm) { grid-template-columns: 1fr; }
+}
+
+.brandCol { max-width: 360px; }
+
+.brand {
+display: inline-flex;
+align-items: center;
+gap: $space-2;
+color: $color-white;
+font-weight: $font-weight-bold;
+font-size: $font-size-md;
+text-decoration: none;
+margin-bottom: $space-4;
+
+svg { color: $color-primary-light; }
+}
+
+.tagline {
+font-size: $font-size-sm;
+line-height: $line-height-relaxed;
+margin-bottom: $space-6;
+}
+
+.social {
+display: flex;
+gap: $space-3;
+
+a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: $radius-pill;
+  background: rgba(255, 255, 255, 0.08);
+  color: $color-white;
+  transition: background $transition-fast;
+  &:hover { background: $color-primary; }
+}
+}
+
+.col {
+h4 {
+  color: $color-white;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 $space-4;
+}
+ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: $space-2; }
+a { color: $color-gray-400; font-size: $font-size-sm; text-decoration: none; transition: color $transition-fast;
+  &:hover { color: $color-primary-light; }
+}
+}
+
+.contact {
+li {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-2;
+  color: $color-gray-400;
+  font-size: $font-size-sm;
+  line-height: $line-height-snug;
+  svg { flex-shrink: 0; margin-top: 2px; color: $color-primary-light; }
+}
+}
+
+.hours { padding-top: $space-2; color: $color-gray-500 !important; }
+
+.bottom {
+margin-top: $space-12;
+padding-top: $space-6;
+border-top: 1px solid rgba(255, 255, 255, 0.08);
+text-align: center;
+font-size: $font-size-xs;
+color: $color-gray-500;
+}
