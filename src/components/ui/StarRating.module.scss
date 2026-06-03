@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.filled { color: #f5a623; }
+.empty { color: $color-gray-300; }
+
+.value {
+  margin-left: $space-1;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+}
