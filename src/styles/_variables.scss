@@ -42,10 +42,11 @@ $bg-dark: $color-secondary;
 $bg-overlay: rgba(0, 0, 0, 0.55);
 $bg-soft-green: $color-primary-soft;
 
-// Text
+// Text — 4 tiers, darkest -> lightest
 $text-primary: $color-gray-900;
 $text-secondary: $color-gray-600;
-$text-muted: $color-gray-500;
+$text-tertiary: $color-gray-500;  // small captions, author location text
+$text-muted: $color-gray-400;
 $text-inverse: $color-white;
 $text-accent: $color-primary;
 
