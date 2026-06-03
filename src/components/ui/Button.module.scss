@@ -1,0 +1,58 @@
+@use '../../styles/variables' as *;
+
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: $space-2;
+font-family: $font-body;
+font-weight: $font-weight-semibold;
+border: 1px solid transparent;
+border-radius: $radius-pill;
+cursor: pointer;
+transition: all $transition-base;
+white-space: nowrap;
+text-decoration: none;
+
+&:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+.primary {
+background: $color-primary;
+color: $color-white;
+&:hover:not(:disabled) {
+  background: $color-primary-dark;
+  transform: translateY(-1px);
+  box-shadow: $shadow-md;
+}
+}
+
+.secondary {
+background: $color-secondary;
+color: $color-white;
+&:hover:not(:disabled) { background: $color-secondary-dark; }
+}
+
+.outline {
+background: transparent;
+color: $color-primary;
+border-color: $color-primary;
+&:hover:not(:disabled) {
+  background: $color-primary;
+  color: $color-white;
+}
+}
+
+.ghost {
+background: transparent;
+color: $text-primary;
+&:hover:not(:disabled) { background: $color-gray-100; }
+}
+
+.sm { padding: $space-2 $space-4; font-size: $font-size-sm; }
+.md { padding: $space-3 $space-6; font-size: $font-size-base; }
+.lg { padding: $space-4 $space-8; font-size: $font-size-md; }
+
+.fullWidth { width: 100%; }
+
+.icon { display: inline-flex; align-items: center; }
