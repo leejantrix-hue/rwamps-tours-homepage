@@ -1,0 +1,54 @@
+@use '../../styles/variables' as *;
+
+.section {
+padding: $space-24 0;
+background: $bg-secondary;
+}
+
+.mapWrap {
+border-radius: $radius-2xl;
+overflow: hidden;
+box-shadow: $shadow-lg;
+}
+
+.map {
+position: relative;
+width: 100%;
+aspect-ratio: 16 / 9;
+background:
+  radial-gradient(ellipse at 50% 60%, rgba(13, 138, 95, 0.08), transparent 70%),
+  linear-gradient(135deg, $bg-soft-green 0%, $color-white 100%);
+border: 1px solid $color-gray-100;
+}
+
+.pin {
+position: absolute;
+transform: translate(-50%, -100%);
+color: $color-primary;
+cursor: pointer;
+display: inline-flex;
+flex-direction: column;
+align-items: center;
+gap: $space-1;
+transition: transform $transition-base;
+
+&:hover {
+  transform: translate(-50%, -100%) scale(1.15);
+  z-index: 2;
+}
+
+svg {
+  filter: drop-shadow(0 4px 8px rgba(13, 138, 95, 0.3));
+}
+}
+
+.label {
+padding: 2px $space-2;
+background: $color-white;
+color: $text-primary;
+font-size: $font-size-xs;
+font-weight: $font-weight-semibold;
+border-radius: $radius-pill;
+box-shadow: $shadow-sm;
+white-space: nowrap;
+}
