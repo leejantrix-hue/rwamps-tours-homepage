@@ -1,0 +1,77 @@
+@use '../../styles/variables' as *;
+
+.header {
+position: sticky;
+top: 0;
+z-index: $z-sticky;
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid $color-gray-100;
+}
+
+.inner {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 72px;
+}
+
+.brand {
+display: inline-flex;
+align-items: center;
+gap: $space-2;
+font-family: $font-body;
+font-weight: $font-weight-bold;
+font-size: $font-size-md;
+color: $text-primary;
+text-decoration: none;
+}
+
+.brandIcon { color: $color-primary; }
+
+.nav {
+display: flex;
+align-items: center;
+gap: $space-8;
+
+a {
+  color: $text-secondary;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+  text-decoration: none;
+  transition: color $transition-fast;
+  &:hover { color: $color-primary; }
+}
+
+@media (max-width: $bp-lg - 1) {
+  position: fixed;
+  top: 72px;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: $space-8 $space-6;
+  background: $color-white;
+  box-shadow: $shadow-lg;
+  transform: translateX(100%);
+  transition: transform $transition-base;
+  gap: $space-4;
+}
+}
+
+.navOpen {
+@media (max-width: $bp-lg - 1) { transform: translateX(0); }
+}
+
+.navCta { margin-left: $space-2; }
+
+.toggle {
+display: none;
+background: none;
+border: none;
+cursor: pointer;
+color: $text-primary;
+
+@media (max-width: $bp-lg - 1) { display: flex; }
+}
