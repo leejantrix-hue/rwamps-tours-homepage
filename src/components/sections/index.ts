@@ -1,0 +1,9 @@
+export { Hero } from './Hero';
+export { SearchBar } from './SearchBar';
+export { Destinations } from './Destinations';
+export { Services } from './Services';
+export { Map } from './Map';
+export { WhyChooseUs } from './WhyChooseUs';
+export { Testimonials } from './Testimonials';
+export { FAQ } from './FAQ';
+export { GetInTouch } from './GetInTouch';
