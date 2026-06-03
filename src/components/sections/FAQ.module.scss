@@ -1,0 +1,137 @@
+@use '../../styles/variables' as *;
+
+.section {
+padding: $space-24 0;
+background: $bg-primary;
+}
+
+.layout {
+display: grid;
+grid-template-columns: 320px 1fr;
+gap: $space-10;
+
+@media (max-width: $bp-lg) { grid-template-columns: 1fr; }
+}
+
+.left {
+display: flex;
+flex-direction: column;
+gap: $space-6;
+}
+
+.categories {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: $space-2;
+
+@media (max-width: $bp-lg) {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+}
+
+.catBtn {
+width: 100%;
+text-align: left;
+padding: $space-3 $space-4;
+background: $color-white;
+border: 1px solid $color-gray-200;
+border-radius: $radius-md;
+font-size: $font-size-sm;
+font-weight: $font-weight-medium;
+color: $text-secondary;
+cursor: pointer;
+transition: all $transition-fast;
+
+&:hover { border-color: $color-primary; color: $color-primary; }
+
+@media (max-width: $bp-lg) { width: auto; }
+}
+
+.catActive {
+background: $color-primary;
+border-color: $color-primary;
+color: $color-white;
+&:hover { color: $color-white; }
+}
+
+.helpCard {
+padding: $space-6;
+background: $color-secondary;
+color: $color-white;
+border-radius: $radius-xl;
+display: flex;
+flex-direction: column;
+gap: $space-3;
+
+h4 {
+  font-family: $font-body;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-white;
+  margin: 0;
+}
+p {
+  font-size: $font-size-sm;
+  color: $color-gray-300;
+  line-height: $line-height-relaxed;
+  margin: 0;
+}
+}
+
+.helpIcon {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 40px; height: 40px;
+border-radius: $radius-pill;
+background: $color-primary;
+color: $color-white;
+}
+
+.accordion {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: $space-3;
+
+li {
+  background: $color-white;
+  border: 1px solid $color-gray-100;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  transition: border-color $transition-fast;
+}
+}
+
+.open { border-color: $color-primary !important; }
+
+.qBtn {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: $space-4;
+padding: $space-5 $space-6;
+background: none;
+border: none;
+font-size: $font-size-md;
+font-weight: $font-weight-semibold;
+color: $text-primary;
+text-align: left;
+cursor: pointer;
+
+svg { color: $color-primary; flex-shrink: 0; }
+}
+
+.answer {
+padding: 0 $space-6 $space-5;
+color: $text-secondary;
+font-size: $font-size-sm;
+line-height: $line-height-relaxed;
+}
