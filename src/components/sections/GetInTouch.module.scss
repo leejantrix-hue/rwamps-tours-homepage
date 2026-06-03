@@ -1,0 +1,111 @@
+@use '../../styles/variables' as *;
+
+.section {
+padding: $space-24 0;
+background: $bg-secondary;
+}
+
+.layout {
+display: grid;
+grid-template-columns: 1fr 1.5fr;
+gap: $space-10;
+align-items: start;
+
+@media (max-width: $bp-lg) { grid-template-columns: 1fr; }
+}
+
+.info {
+padding: $space-8;
+background: $color-secondary;
+color: $color-white;
+border-radius: $radius-2xl;
+}
+
+.contactList {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: $space-6;
+
+li {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-4;
+
+  strong {
+    display: block;
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $color-primary-light;
+    margin-bottom: 2px;
+  }
+  a, span {
+    color: $color-white;
+    font-size: $font-size-sm;
+    text-decoration: none;
+    line-height: $line-height-snug;
+  }
+  a:hover { color: $color-primary-light; }
+}
+}
+
+.icon {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 42px; height: 42px;
+border-radius: $radius-pill;
+background: rgba(255, 255, 255, 0.08);
+color: $color-primary-light;
+flex-shrink: 0;
+}
+
+.form {
+display: flex;
+flex-direction: column;
+gap: $space-5;
+padding: $space-8;
+background: $color-white;
+border-radius: $radius-2xl;
+box-shadow: $shadow-md;
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  font-size: $font-size-sm;
+  color: $text-secondary;
+  font-weight: $font-weight-medium;
+}
+
+input, textarea {
+  width: 100%;
+  padding: $space-3 $space-4;
+  background: $bg-secondary;
+  border: 1px solid $color-gray-100;
+  border-radius: $radius-md;
+  font-size: $font-size-sm;
+  color: $text-primary;
+  font-family: inherit;
+  transition: border-color $transition-fast;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+    background: $color-white;
+  }
+}
+
+textarea { resize: vertical; min-height: 120px; }
+}
+
+.row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: $space-4;
+
+@media (max-width: $bp-sm) { grid-template-columns: 1fr; }
+}
