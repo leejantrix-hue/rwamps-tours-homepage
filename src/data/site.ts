@@ -58,6 +58,8 @@ bgImage: `${ASSET_HOST}/assets/bg_image-DoHP6FS-.png`,
 
 // Section-specific aliases consumed by components
 heroBg: `${ASSET_HOST}/assets/header-X9LcTuvO.png`,
+heroOne: `${ASSET_HOST}/assets/tours_one-YHspAtGq.png`,
+heroTwo: `${ASSET_HOST}/assets/tours_three-BF86vEF9.png`,
 whyImage: `${ASSET_HOST}/assets/tours_one-YHspAtGq.png`,
 } as const;
 
