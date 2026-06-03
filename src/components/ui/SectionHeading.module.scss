@@ -1,0 +1,50 @@
+@use '../../styles/variables' as *;
+
+.heading {
+display: flex;
+flex-direction: column;
+gap: $space-3;
+margin-bottom: $space-12;
+}
+
+.left { align-items: flex-start; text-align: left; }
+.center { align-items: center; text-align: center; }
+
+.eyebrow {
+display: inline-flex;
+align-items: center;
+gap: $space-2;
+padding: $space-1 $space-3;
+background: $color-primary-soft;
+color: $color-primary-dark;
+font-size: $font-size-xs;
+font-weight: $font-weight-semibold;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+border-radius: $radius-pill;
+}
+
+.title {
+font-family: $font-body;
+font-size: clamp(1.75rem, 4vw, 2.5rem);
+font-weight: $font-weight-bold;
+line-height: $line-height-tight;
+color: $text-primary;
+margin: 0;
+max-width: 38ch;
+
+em, i {
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: $font-weight-regular;
+  color: $color-primary;
+}
+}
+
+.subtitle {
+font-size: $font-size-md;
+color: $text-secondary;
+line-height: $line-height-relaxed;
+margin: 0;
+max-width: 60ch;
+}
