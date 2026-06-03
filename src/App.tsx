@@ -1,10 +1,35 @@
-import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import { Header } from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
+import {
+  Hero,
+  SearchBar,
+  Destinations,
+  Services,
+  Map,
+  WhyChooseUs,
+  Testimonials,
+  FAQ,
+  GetInTouch,
+} from './components/sections';
 
-export default function App() {
-return (
-  <Routes>
-    <Route path="/" element={<HomePage />} />
-  </Routes>
-);
+function App() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <SearchBar />
+        <Destinations />
+        <Services />
+        <Map />
+        <WhyChooseUs />
+        <Testimonials />
+        <FAQ />
+        <GetInTouch />
+      </main>
+      <Footer />
+    </>
+  );
 }
+
+export default App;
