@@ -1,0 +1,130 @@
+@use '../../styles/variables' as *;
+
+.section {
+padding: $space-24 0;
+background: $bg-primary;
+}
+
+.grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: $space-16;
+align-items: center;
+
+@media (max-width: $bp-lg) { grid-template-columns: 1fr; gap: $space-10; }
+}
+
+.visual {
+position: relative;
+border-radius: $radius-2xl;
+overflow: visible;
+aspect-ratio: 4 / 5;
+max-width: 480px;
+
+img {
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: $radius-2xl;
+  box-shadow: $shadow-lg;
+}
+}
+
+.airplane {
+position: absolute;
+top: $space-6;
+right: -$space-4;
+width: 56px; height: 56px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+background: $color-accent;
+color: $color-white;
+border-radius: $radius-pill;
+box-shadow: $shadow-md;
+transform: rotate(-15deg);
+}
+
+.statsBubble {
+position: absolute;
+bottom: $space-6;
+left: -$space-6;
+padding: $space-4 $space-5;
+background: $color-white;
+border-radius: $radius-xl;
+box-shadow: $shadow-lg;
+
+strong { display: block; font-size: $font-size-xl; color: $color-primary; font-weight: $font-weight-bold; }
+small { color: $text-secondary; font-size: $font-size-xs; }
+}
+
+.copy { display: flex; flex-direction: column; gap: $space-4; }
+
+.reasons {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: $space-6;
+
+li {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-4;
+
+  h4 {
+    font-family: $font-body;
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
+    color: $text-primary;
+    margin: 0 0 $space-1;
+  }
+  p {
+    color: $text-secondary;
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+    margin: 0;
+  }
+}
+}
+
+.icon {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 44px; height: 44px;
+border-radius: $radius-md;
+background: $color-primary-soft;
+color: $color-primary;
+flex-shrink: 0;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: $space-6;
+margin-top: $space-16;
+padding: $space-8 $space-6;
+background: $color-secondary;
+border-radius: $radius-2xl;
+color: $color-white;
+
+@media (max-width: $bp-md) { grid-template-columns: repeat(2, 1fr); }
+}
+
+.stat {
+text-align: center;
+display: flex;
+flex-direction: column;
+gap: $space-1;
+
+strong {
+  font-family: $font-display;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $color-primary-light;
+}
+span {
+  font-size: $font-size-sm;
+  color: $color-gray-300;
+}
+}
