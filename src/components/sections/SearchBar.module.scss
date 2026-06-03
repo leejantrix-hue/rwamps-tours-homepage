@@ -1,0 +1,68 @@
+@use '../../styles/variables' as *;
+
+.wrapper {
+margin-top: -$space-12;
+position: relative;
+z-index: 2;
+}
+
+.bar {
+display: flex;
+align-items: center;
+gap: $space-2;
+padding: $space-3 $space-4;
+background: $color-white;
+border-radius: $radius-pill;
+box-shadow: $shadow-lg;
+
+@media (max-width: $bp-md) {
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: $radius-xl;
+  padding: $space-4;
+  gap: $space-3;
+}
+}
+
+.field {
+display: flex;
+align-items: center;
+gap: $space-3;
+padding: $space-2 $space-4;
+flex: 1;
+min-width: 0;
+}
+
+.icon { color: $color-primary; flex-shrink: 0; }
+
+.col {
+display: flex;
+flex-direction: column;
+flex: 1;
+min-width: 0;
+
+label {
+  font-size: $font-size-xs;
+  color: $text-tertiary;
+  font-weight: $font-weight-medium;
+}
+select {
+  border: none;
+  background: transparent;
+  font-size: $font-size-sm;
+  color: $text-primary;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  outline: none;
+  padding: 2px 0;
+}
+}
+
+.divider {
+width: 1px;
+height: 32px;
+background: $color-gray-200;
+@media (max-width: $bp-md) { display: none; }
+}
+
+.cta { flex-shrink: 0; }
